@@ -1,31 +1,28 @@
 function bubbleSort(arr) 
 {
-    const sortedArray = [...arr];
-    const n = sortedArray.length;
+    const n = arr.length;
 
     for (let i = 0; i < n - 1; i++) 
     {
-        let swapped = false;
         for (let j = 0; j < n - i - 1; j++) 
         {
-            if (sortedArray[j] > sortedArray[j + 1]) 
+            if (arr[j] > arr[j + 1]) 
             {
-                const temp = sortedArray[j];
-                sortedArray[j] = sortedArray[j + 1];
-                sortedArray[j + 1] = temp;
-                swapped = true; 
+                const temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
-        if (!swapped) break;
     }
-    return sortedArray;
+    
+    return arr;
 }
 
-const userInput = prompt("Enter numbers separated by spaces:");
+const userInput = prompt("Enter numbers separated by spaces:", "5 2 9 1 5 6");
 
-const unsortedArray = userInput.split(" ").map(Number);
-console.log("Before Sorting:", unsortedArray);
+const numbers = userInput.split(" ").map(Number);
 
+console.log("Before Sorting:", numbers);
 
-const result = bubbleSort(unsortedArray);
-console.log("After Sorting:", result);
+const sorted = bubbleSort(numbers);
+console.log("After Sorting:", sorted);
