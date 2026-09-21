@@ -22,7 +22,7 @@ class Main
         int original = n;
         int sum = 0;
         
-        int digits = (int)Math.log10(n)+1;
+        int digits = String.valueOf(Math.abs(n)).length();
         
         while(n>0)
         {
