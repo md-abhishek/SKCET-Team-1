@@ -13,4 +13,4 @@ const num1 = Number(prompt("Enter first number:"));
 const num2 = Number(prompt("Enter second number:"));
 
 const lcm = (num1 * num2) / findGCD(num1, num2);
-alert(`LCM is: ${lcm}`);
+console.log("LCM is: " + lcm);
