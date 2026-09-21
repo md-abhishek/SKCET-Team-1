@@ -1,14 +1,8 @@
-function sample() 
+function sample(...args) 
 {
-    if (arguments.length === 1) 
-    {
-        console.log(arguments[0]);
-    }
-    else if (arguments.length === 2) 
-    {
-        console.log(arguments[0], arguments[1]);
-    }
+    console.log(args.join(" "));
 }
 
-sample("One");          
-sample("One","Two");   
+sample("One");              
+sample("One", "Two");        
+sample("One", "Two", "Three");
